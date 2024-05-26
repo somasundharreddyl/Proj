@@ -1,4 +1,4 @@
-version: "1"
+version: "3"
 services:
   application:
     image: employeeapp
@@ -7,11 +7,11 @@ services:
     networks:
       - springboot-db-net
     depends_on:
-      - instancedb
+      - serverdb
     volumes:
       - /data/springboot-app
     
-  mysqldb:
+  serverdb:
     image: mysql:5.7
     networks:
       - springboot-db-net
