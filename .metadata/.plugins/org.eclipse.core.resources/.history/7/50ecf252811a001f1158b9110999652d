@@ -1,0 +1,51 @@
+package com.hexa.employeemanagement.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hexa.employeemanagement.dto.EmployeeRequestDto;
+import com.hexa.employeemanagement.dto.EmployeeResponseDto;
+import com.hexa.employeemanagement.entity.Employee;
+import com.hexa.employeemanagement.repository.EmployeeRepository;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+	
+	@Autowired
+	private EmployeeRepository employeeRepository;
+
+	@Override
+	public Long createEmployee(EmployeeRequestDto employeeRequestDto) {
+		
+		employeeRepository.save(null)
+		return null;
+	}
+
+	@Override
+	public EmployeeResponseDto findEmployeeById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public EmployeeResponseDto updateEmployee(EmployeeResponseDto employee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteEmployeeById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<EmployeeResponseDto> getEmployeeList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

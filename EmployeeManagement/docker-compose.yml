@@ -1,0 +1,24 @@
+version: "1"
+services:
+  application:
+    image: employeeapp
+    ports:
+      - "9080:8000"
+    networks:
+      - springboot-db-net
+    depends_on:
+      - instancedb
+    volumes:
+      - /data/springboot-app
+    
+  mysqldb:
+    image: mysql:5.7
+    networks:
+      - springboot-db-net
+    environment:
+      - MYSQL_ROOT_PASSWORD=Password@123
+      - MYSQL_DATABASE=emssystem
+    volumes:
+      - /data/mysql
+networks:
+  springboot-db-net:

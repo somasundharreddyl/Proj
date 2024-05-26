@@ -1,0 +1,5 @@
+package com.hexa.employeemanagement.service;
+
+public interface EmployeeService {
+
+}
